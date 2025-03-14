@@ -8,6 +8,7 @@ import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 import PokemonDetail from "../pages/PokemonDetail";
 import Layout from "../components/Layout";
+import MyPokemons from "../pages/MyPokemons";
 
 export default function Router() {
     return (
@@ -17,6 +18,7 @@ export default function Router() {
                 <Route element={<Layout />}>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/pokemon/:id" element={<PokemonDetail />} />
+                    <Route path="/mypokemons" element={<MyPokemons />} />
                 </Route>
             </Routes>
         </BrowserRouter>

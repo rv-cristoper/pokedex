@@ -22,6 +22,12 @@ export default function Layout() {
                 {user
                     ? <div className="flex justify-end items-center">
                         <p className="text-sm font-semibold text-white">{user?.name || ''}</p>
+                        <span className="text-white mx-4">|</span>
+                        <Link to={`/mypokemons`}>
+                            <button className=" text-sm bg-red-500 text-white px-4 py-1 rounded-lg cursor-pointer">
+                                Mis pokemones
+                            </button>
+                        </Link>
                         <span className="text-white ml-4">|</span>
                         <button className=" text-sm ml-4 bg-white text-black px-4 py-1 rounded-lg cursor-pointer" onClick={() => signOut(() => { })}>
                             Cerrar sesión
